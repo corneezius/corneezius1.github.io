@@ -148,13 +148,15 @@
     <!-- Idea Header -->
 
       <div class="idea-info" style="margin-top:100px;">
-      <div class="panel panel-warning" style="min-height:250px">
+      <div class="panel panel-warning" style="min-height:300px">
 
-<p class="text-right" style="padding-right:10px"><small>  ({{IdeaTimestamp | date:'MM/dd/yy HH:mm'}})</small>
+       <p class="text-right"><small>({{item.timestamp | date:'MM/dd/yy HH:mm'}})</small>
 
-        <br><br><h2 class="text-center" style="padding-right:30px" style="padding-left:30px">{{ideaTitle}}</h2> 
+        <br><br><h2 class="text-center" style="margin-right:15px" style="margin-left:15px">{{ideaTitle}}</h2> 
         <p class="text-center"> <small> -{{ideaAuthor}}</small>
         <br><br>
+
+
 
         <a ng-click="LikeIdea('dislike',item.idea,ideas.indexOf(item))"  class="btn btn-lg btn-danger" role="button"><span class="glyphicon glyphicon-remove"></span></a>
          &nbsp &nbsp
@@ -180,7 +182,7 @@
     <!-- Tabs -->
       <ul class="nav nav-tabs" role="tablist" id="myTab">
         <li role="presentation" class="active "><a href="#Activity" role="tab" data-toggle="tab">Discussion</a></li>
-        <li role="presentation"><a href="#Plan" role="tab" data-toggle="tab">Action Items</a></li>
+        <li role="presentation"><a href="#Plan" role="tab" data-toggle="tab">How should we get started?</a></li>
         <!--
         <li role="presentation"><a href="#Work" role="tab" data-toggle="tab">Work Products<span class="badge">2</span></a></li>
         <li role="presentation"><a href="#Invite" role="tab" data-toggle="tab">Invite</a></li>
@@ -323,5 +325,6 @@
   <script src="js/app.min.js" type="text/javascript"></script>
 </body>
 </html>
+
 
 
