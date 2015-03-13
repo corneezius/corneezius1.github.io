@@ -155,7 +155,7 @@
         <p class="text-center"> <small> -{{ideaAuthor}}</small>
         <br><br><br>
 
- <div class="item" ng-class="(id,item) in ideas| filter: query| filter: {'like': '!' + user.facebook.id} | filter: {'dislike': '!' + user.facebook.id}" ng-class="{active : $first}">
+ 
 
    <p class="text-center"> <a ng-click="LikeIdea('dislike',item.idea,ideas.indexOf(item))"  class="btn btn-lg btn-danger" role="button"><span class="glyphicon glyphicon-remove"></span></a>
          &nbsp &nbsp &nbsp
