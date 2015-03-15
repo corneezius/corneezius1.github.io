@@ -25,7 +25,36 @@
         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=xxxxxxxxx&version=v2.0";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-
+    
+    <script>
+    var signupForm = document.getElementById('signup-form');
+    var signupSuccess = document.getElementById('signup-success');
+    var signupError = document.getElementById('signup-error');
+    var signupBtn = document.getElementById('signup-button');
+    var onSignupComplete = function(error) {
+      signupBtn.disabled = false;
+      if (error) {
+        signupError.innerHTML = 'Sorry. Could not signup.';
+      } else {
+        signupSuccess.innerHTML = 'Thanks for signing up!';
+        // hide the form
+        signupForm.style.display = 'none';
+      }
+    };
+    function signup(formObj) {
+        // Store emails to firebase
+        var myFirebaseRef = new Firebase("https://yourappname.firebaseio.com/signups");
+        myFirebaseRef.push({
+          email: formObj.email.value,
+        }, onSignupComplete);
+        signupBtn.disabled = true;
+        return false;
+    }
+</script>
+    
+    
+    
+    
 
     </head>
 
