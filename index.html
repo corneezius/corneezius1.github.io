@@ -31,7 +31,7 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     
-    <script>
+     <script>
     var signupForm = document.getElementById('signup-form');
     var signupSuccess = document.getElementById('signup-success');
     var signupError = document.getElementById('signup-error');
@@ -56,10 +56,8 @@
         return false;
     }
 </script>
-    
-    
-    
-    
+
+  
 
     </head>
 
@@ -112,7 +110,23 @@
 
                         <div class="hero-unit">
                             <h1>Imagine. Share. Make it Happen.</h1>
-                             <div class="container">   
+                             <div class="container">  
+                             
+                 
+             <div class="signup">
+    <p id="signup-success" class="text-success"></p>
+    <p id="signup-error" class="text-danger"></p>
+    <form class="signup-form form-inline" id="signup-form" role="form" onsubmit="return signup(this)">
+        <input class="form-control" style="width:250px" name="email" type="email" placeholder="Your email goes here!" required>
+        <button class="btn btn-success" id="signup-button" type="submit" >Request Early Access</button>
+    </form>
+
+
+</div>            
+                             
+                             
+                             
+                             
 <ul class="list-inline intro-social-buttons">
                             <li>
                                 <a href="#" ng-click="FacebookLogin()" class="btn btn-info"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Login</span></a>
