@@ -31,7 +31,7 @@
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
     
-     <script>
+<script>
     var signupForm = document.getElementById('signup-form');
     var signupSuccess = document.getElementById('signup-success');
     var signupError = document.getElementById('signup-error');
@@ -53,13 +53,9 @@
           email: formObj.email.value,
         }, onSignupComplete);
         signupBtn.disabled = true;
-          // Redirect user to thank you page
-        window.location.replace("thankyou.html");
+        alert("thanks for signing up!");
         return false;
     }
- 
-    
-
 </script>
 
   
