@@ -46,16 +46,13 @@
         signupForm.style.display = 'none';
       }
     };
-    function signup(formObj) {
-        // Store emails to firebase
-        var myFirebaseRef = new Firebase("https://crowdfluttr.firebaseio.com/signups");
-        myFirebaseRef.push({
-          email: formObj.email.value,
-        }, onSignupComplete);
-        signupBtn.disabled = true;
-       window.open("http://www.w3schools.com");
-        return false;
-    }
+   function signup(formObj) {
+  var myFirebaseRef = new Firebase("https://crowdfluttr.firebaseio.com/signups");
+  myFirebaseRef.push({email: formObj.email.value})
+  window.location.href = "thankyou.html";
+   
+  }
+
 </script>
 
   
