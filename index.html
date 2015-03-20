@@ -47,6 +47,7 @@
       }
     };
    function signup(formObj) {
+       alert('hello')
   var myFirebaseRef = new Firebase("https://crowdfluttr.firebaseio.com/signups");
   myFirebaseRef.push({email: formObj.email.value})
   window.location.href = "idea.html";
